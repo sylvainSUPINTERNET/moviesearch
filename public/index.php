@@ -31,14 +31,14 @@ if(isset($url_composants[2])){
 
 try{
 
-  list($controller, $action) = ThirtySix\Router::load($action_name,$controller_name);
+  list($controller, $action) = MovieSearch\Router::load($action_name,$controller_name);
 
-}catch(ThirtySix\Exception\ControllerNotFound $e){
+}catch(MovieSearch\Exception\ControllerNotFound $e){
   $controller = new ErrorController();
   $action = "e404";
   $argument = $e;
 
-}catch(ThirtySix\Exception\ActionNotFound $e){
+}catch(MovieSearch\Exception\ActionNotFound $e){
   $controller = new Controller\ErrorController();
   $action = "e404";
   $argument = $e;
