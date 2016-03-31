@@ -16,7 +16,7 @@ class Router{
 
     if(!method_exists($controller,$action))
       throw new \Exception("L'action ".$action_name." est introuvable dans le controller ".$controller_name);
-    
+
     return [$controller, $action];
   }
 }
